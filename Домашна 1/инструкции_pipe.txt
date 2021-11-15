@@ -1,0 +1,8 @@
+Овој pipe извршува филтрирање од симнатата мапа од OpenStreepMap која е во формат .osm
+и се состои од сите аптеки кој се наоѓаат во градот Скопје, а потоа се конвертираат во
+.cvs датотека што претставува база на податоци:
+
+За да може да функционираaaт овие команди потребно е да се симнат osmfilter.exe и osmconvert.exe.
+
+osmfilter map.osm --keep="amenity=pharmacy" 
+osmconvert64.exe - --all-to-nodes --csv="@id @lon @lat amenity name" --csv-headline --csv-separator="," -o="apteki1.csv"
