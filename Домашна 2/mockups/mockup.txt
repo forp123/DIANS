@@ -1,0 +1,1 @@
+При градњето на овој прототип и mockup користени се Java Spring Boot MVC(backend логика) и Thymeleaf(за кориснички интерфејс).

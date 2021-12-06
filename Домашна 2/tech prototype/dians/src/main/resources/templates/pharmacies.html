@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="prototype.css"/>
+    <title>Title</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <style>
+        .container {
+            max-width: 960px;
+        }
+
+        body {
+            font-family: 'Roboto Slab', serif;
+        }
+
+        .site-header {
+            background-color: #93aff7;
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            backdrop-filter: saturate(180%) blur(20px);
+            color: #212529;
+        }
+
+        .site-header a {
+            color: #212529;
+            transition: ease-in-out color .15s;
+        }
+
+        .site-header a:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .product-device {
+            position: absolute;
+            right: 10%;
+            bottom: -30%;
+            width: 300px;
+            height: 540px;
+            background-color: #333;
+            border-radius: 21px;
+            -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+        }
+
+        .product-device::before {
+            position: absolute;
+            top: 10%;
+            right: 10px;
+            bottom: 10%;
+            left: 10px;
+            content: "";
+            background-color: white;
+            border-radius: 5px;
+        }
+
+        .product-device-2 {
+            top: -25%;
+            right: auto;
+            bottom: 0;
+            left: 5%;
+            background-color: #e5e5e5;
+        }
+
+        .border-top {
+            border-top: 1px solid #e5e5e5;
+        }
+
+        .border-bottom {
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .box-shadow {
+            box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+        }
+
+        .flex-equal > * {
+            -ms-flex: 1;
+            -webkit-box-flex: 1;
+            flex: 1;
+        }
+
+        @media (min-width: 768px) {
+            .flex-md-equal > * {
+                -ms-flex: 1;
+                -webkit-box-flex: 1;
+                flex: 1;
+            }
+        }
+
+        .overflow-hidden {
+            overflow: hidden;
+        }
+
+        .button1 {
+            margin-top: 38px;
+            border-radius: 19px;
+            font-size: 20px;
+            padding-right: 20px;
+            padding-left: 20px;
+            width: 30%;
+
+        }
+
+        .bt1 {
+            background-color: #333;
+            color: white;
+
+        }
+
+        .diff {
+            background-color: white;
+            margin-left: 5%;
+        }
+
+        .kopce-apteka {
+            height: 77px;
+            width: 170px;
+            padding-top: 20px;
+
+        }
+
+        .kopce-zdr {
+            height: 77px;
+            width: 170px;
+        }
+
+        .kopce-zabol {
+            width: 22%;
+            color: white;
+        }
+
+        .button1:hover {
+            background-color: white;
+            color: #333;
+        }
+
+        .bt1:hover {
+            background-color: transparent;
+        }
+
+        .diff:hover {
+            background-color: transparent;
+        }
+
+        .glaven {
+            background-color: #93d8f7;
+        }
+
+        .naslov {
+            font-size: 43px;
+            animation-name: dviziInleft;
+            animation-duration: 1s;
+            animation-timing-function: ease-out;
+        }
+
+        .podnaslov {
+            font-size: 35px;
+            animation-name: dviziInleft;
+            animation-duration: 1s;
+            animation-timing-function: ease-out;
+            margin-top: 20px;
+        }
+
+        .table {
+            text-align: center;
+        }
+
+        .nav-desno {
+            margin-left: auto;
+        }
+
+        .pad-nav {
+            padding: 10px;
+        }
+
+        @keyframes dviziInleft {
+            0% {
+                opacity: 0;
+                transform: translateX(-100px);
+            }
+
+            80% {
+                transform: translateX(10px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translate(0);
+            }
+        }
+
+        .no-link-color {
+            color: #333;
+        }
+
+        .detali {
+            padding-top: 40px;
+            background-color: #93d8f7;
+            padding-bottom: 40px;
+        }
+
+        .main {
+            background-color: #93d8f7;
+
+        }
+
+        .lista-element {
+            padding-top: 15px;
+        }
+
+        .kopce-detali {
+            width: 48%;
+            color: white;
+            font-size: 14px;
+        }
+
+        .back {
+            background-color: white;
+            color: #333;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<nav class="site-header sticky-top py-1">
+    <div class="container d-flex flex-column flex-md-row ">
+        <a class="py-2 d-none d-md-inline-block" href="/home">АПТЕКИ ВО СКОПЈЕ</a>
+        <a class="py-2 d-none d-md-inline-block nav-desno pad-nav" href="/home">Дома</a>
+        <a class="py-2 d-none d-md-inline-block pad-nav" href="/home/about-us">За нас</a>
+        <a class="py-2 d-none d-md-inline-block pad-nav" href="/home/pharmacies">Пронајди</a>
+        <a class="py-2 d-none d-md-inline-block pad-nav" href="/home/contact">Контакт</a>
+        <a class="py-2 d-none d-md-inline-block pad-nav" href="/home/search">🔍</a>
+    </div>
+</nav>
+
+<div class="container" >
+    <h1 th:if="${errorOccurred}" th:text="${error}"></h1>
+</div>
+
+<div class="container">
+    <h3 class="display-2 font-weight-normal podnaslov">Пронајдени резултати</h3>
+    <br>
+    <table class="table  table-hover">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Назив</th>
+            <th scope="col">24/7 работно време</th>
+            <th scope="col">Адреса</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td><a class="no-link-color" href="/pharmacies/info?id=1">Зегин Тобако 2</a></td>
+            <td>Не</td>
+            <td>Локал 6, Булевар Јане Сандански, Скопје 1000</td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>Зегин Буњаковец</td>
+            <td>Да</td>
+            <td>бул. Партизански Одреди број 25/1-35, Центар, Скопје 1000</td>
+        </tr>
+        <tr >
+            <th scope="row">3</th>
+            <td>Зегин Зелен Пазар</td>
+            <td>Не</td>
+            <td>бул. Кочо Рацин, Зелен пазар 36/локал 368, Центар, Скопје 1000</td>
+        </tr>
+        <tr>
+            <th scope="row">4</th>
+            <td>Зегин Градска</td>
+            <td>Да</td>
+            <td>11-ти Октомври (Градска болница), Центар, Скопје 1000</td>
+        </tr>
+        <tr >
+            <th scope="row">5</th>
+            <td>Зегин Бисер</td>
+            <td>Не</td>
+            <td>бул. Јане Сандански број 24 л-6, Аеродром, Скопје 1000</td>
+        </tr>
+        <tr>
+            <th scope="row">6</th>
+            <td>Зегин Алумина</td>
+            <td>Не</td>
+            <td>бул. Митрополит Теодосиј Гологанов број 98, Тафталиџе, Скопје 1000</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
