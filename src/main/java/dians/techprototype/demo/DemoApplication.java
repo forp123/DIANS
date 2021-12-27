@@ -8,8 +8,6 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Component;
 
 @SpringBootApplication
-@ComponentScan("dians.techprototype.demo.repository")
-@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
 public class DemoApplication {
 
     public static void main(String[] args) {
