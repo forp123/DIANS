@@ -10,9 +10,8 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class PharmacyServiceImpl implements PharmacyService{
+public class PharmacyServiceImpl  implements PharmacyService{
 
-    //private final InMemoryPharmacyRepository pharmacyRepository;
     private final PharmacyRepository pharmacyRepository;
 
     public PharmacyServiceImpl(PharmacyRepository pharmacyRepository) {
@@ -25,7 +24,7 @@ public class PharmacyServiceImpl implements PharmacyService{
     }
 
     @Override
-    public Optional<Pharmacy> findById(Integer id) throws PharmacyNotFoundException {
+    public Optional<Pharmacy> findById(Integer id) {
         return this.pharmacyRepository.findById(id);
     }
 }

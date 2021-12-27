@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-@RequestMapping("/home")
+@RequestMapping({"/home", "/"})
 public class HomaPageController {
     @GetMapping
     public String getHomePage(@RequestParam(required = false) String error, Model model) {
