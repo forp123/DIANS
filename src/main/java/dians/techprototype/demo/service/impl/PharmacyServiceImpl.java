@@ -2,7 +2,6 @@ package dians.techprototype.demo.service.impl;
 
 import dians.techprototype.demo.model.Pharmacy;
 import dians.techprototype.demo.model.exceptions.PharmacyNotFoundException;
-import dians.techprototype.demo.repository.InMemoryPharmacyRepository;
 import dians.techprototype.demo.repository.PharmacyRepository;
 import dians.techprototype.demo.service.PharmacyService;
 import org.springframework.stereotype.Service;
